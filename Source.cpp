@@ -12,10 +12,15 @@ int main(int argc, char** argv)
 		switch (first_arg[1])
 		{
 			case ADD:
-				note.name = argv[2];
-				note.message = argv[3];
 
-				std::cout << note.name << ": " << note.message << std::endl;
+				note.name = argv[2];
+
+				std::cout << "\n" << note.name << ": \n\t";
+				std::getline(std::cin, input);
+
+				note.message = input;
+
+				std::cout << note.name << ": \n\t" << note.message << std::endl;
 				break;
 
 			default:
